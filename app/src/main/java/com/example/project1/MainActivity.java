@@ -10,6 +10,10 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private final int Fragment_1 = 1;
+    private final int Fragment_2 = 2;
+    private final int Fragment_3 = 3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

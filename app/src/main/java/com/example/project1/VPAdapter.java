@@ -37,3 +37,4 @@ public class VPAdapter extends FragmentPagerAdapter {
         return items.size();
     }
 }
+

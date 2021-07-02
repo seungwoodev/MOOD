@@ -1,64 +1,84 @@
 package com.example.project1;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Fragment1#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
+import androidx.fragment.app.Fragment;
+
+import java.util.ArrayList;
+
 public class Fragment1 extends Fragment {
+    ArrayList<Integer> imageList;
+    LayoutInflater layoutInflater;
+    View view;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    ArrayList<PhoneBook> phoneBookList;
+    Context context;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public Fragment1() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment1.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Fragment1 newInstance(String param1, String param2) {
-        Fragment1 fragment = new Fragment1();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+        // 리사이클러뷰에 표시할 데이터 리스트 생성.
+        phoneBookList = new ArrayList<>();
+        //context = this;
+        phoneBookList = new ArrayList<>();
+        String sortOrder = ContactsContract.Contacts.DISPLAY_NAME + " COLLATE LOCALIZED ASC";
+
+        Cursor c = getActivity().getContentResolver().query(
+                ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
+                null, null, sortOrder);
+        ArrayList<Integer> imageList=new ArrayList();
+        while (c.moveToNext()) {
+
+            String contactName = c
+                    .getString(c
+                            .getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+            String phNumber = c
+                    .getString(c
+                            .getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+            PhoneBook phoneBook = new PhoneBook(0, contactName, phNumber);
+
+            //야매
+            imageList.add(R.drawable.per);
+            if (phNumber.startsWith("01")) {
+                phoneBookList.add(phoneBook);
+            }
         }
+
+        // 정렬
+        c.close();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState) {
+        view = layoutInflater.inflate(R.layout.fragment_1, container, false);
+
+        // 리사이클러뷰에 LinearLayoutManager 객체 지정.
+        RecyclerView recyclerView = view.findViewById(R.id.recycler1);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+        // 리사이클러뷰에 SimpleTextAdapter 객체 지정.
+        SimpleTextAdapter adapter = new SimpleTextAdapter(phoneBookList);
+        recyclerView.setAdapter(adapter);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_1, container, false);
+        return view;
     }
+
 }
