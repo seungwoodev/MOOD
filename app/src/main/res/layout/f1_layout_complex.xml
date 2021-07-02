@@ -9,28 +9,33 @@
     <ImageView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/item_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/per"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/item_name"
         android:layout_width="70dp"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:text="홍길동"
         android:gravity="center"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/item_phonenum"
-        android:layout_width="230dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
         android:text="010-1234-5678"
         android:gravity="center"
-        android:textSize="20dp"
-        android:layout_marginBottom="5dp" />
+        android:textSize="10sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

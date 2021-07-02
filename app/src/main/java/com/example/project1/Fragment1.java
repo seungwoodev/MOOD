@@ -30,16 +30,12 @@ public class Fragment1 extends Fragment {
     Context context;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // 리사이클러뷰에 표시할 데이터 리스트 생성.
         phoneBookList = new ArrayList<>();
-        //넣기
-
-
         //context = this;
         phoneBookList = new ArrayList<>();
         String sortOrder = ContactsContract.Contacts.DISPLAY_NAME + " COLLATE LOCALIZED ASC";
@@ -49,6 +45,7 @@ public class Fragment1 extends Fragment {
                 null, null, sortOrder);
         ArrayList<Integer> imageList=new ArrayList();
         while (c.moveToNext()) {
+
             String contactName = c
                     .getString(c
                             .getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
