@@ -1,16 +1,32 @@
 package com.example.project1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.Manifest;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.DexterError;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.PermissionRequestErrorListener;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private final int Fragment_1 = 1;
@@ -20,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ViewPager vp=findViewById(R.id.viewpager);
         VPAdapter adapter=new VPAdapter(getSupportFragmentManager());
         vp.setAdapter(adapter);
-
         // 연동
         TabLayout tab=findViewById(R.id.tab);
         tab.setupWithViewPager(vp);
@@ -38,17 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i=0;i<3;i++) tab.getTabAt(i).setIcon(images.get(i));
 
-
-//        // 화면 전환 프래그먼트 선언 및 초기 화면 설정
-//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//        fragmentTransaction.add(R.id.viewpager, Fragment1.newInstance()).commit();
     }
-
-    public void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.viewpager, fragment).commit();      // Fragment로 사용할 MainActivity내의 layout공간을 선택합니다.
-    }
-
 
 }

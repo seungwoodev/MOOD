@@ -12,8 +12,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import java.util.ArrayList;
 
 
@@ -28,7 +30,7 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
     }
     // 아이템 뷰를 저장하는 뷰홀더 클래스.
     public class ViewHolder extends RecyclerView.ViewHolder {
-        //ImageView img;
+        ImageView img;
         TextView name ;
         TextView phnum ;
 
@@ -36,7 +38,7 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
             super(itemView) ;
 
             // 뷰 객체에 대한 참조. (hold strong reference)
-            //this.img = itemView.findViewById(R.id.item_image) ;
+            this.img = itemView.findViewById(R.id.item_image) ;
             this.name = itemView.findViewById(R.id.item_name) ;
             this.phnum = itemView.findViewById(R.id.item_phonenum);
         }
@@ -75,6 +77,21 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
 
         holder.name.setGravity(Gravity.CENTER);
         holder.phnum.setGravity(Gravity.LEFT);
+
+        ColorGenerator generator = ColorGenerator.MATERIAL; // or use DEFAULT
+        // generate random color
+        int color = generator.getRandomColor();
+
+        //below text drawable is a circular.
+        TextDrawable drawable2 = TextDrawable.builder().beginConfig()
+                .width(100)  // width in px
+                .height(100) // height in px
+                .endConfig()
+                //as we are building a circular drawable we are calling a build round method.
+                //in that method we are passing our text and color.
+                .buildRound(modal.getName().substring(0, 1), color);
+        //setting image to our image view on below line.
+        holder.img.setImageDrawable(drawable2);
 
 
         //holder.img.setImageResource(R.drawable.per);
