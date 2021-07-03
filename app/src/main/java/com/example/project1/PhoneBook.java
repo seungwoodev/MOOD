@@ -11,6 +11,11 @@ public class PhoneBook {
         this.name = name;
         this.num = num;
     }
+    PhoneBook(String name, String num)
+    {
+        this.name = name;
+        this.num = num;
+    }
 
     public int getImage(){return image;}
     public String getName(){return name;}
