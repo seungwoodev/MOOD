@@ -25,6 +25,7 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
     public void onAttach(Activity activity){
         this.activity= (MainActivity) activity;
     }
+    //
     // 아이템 뷰를 저장하는 뷰홀더 클래스.
     public class ViewHolder extends RecyclerView.ViewHolder {
         //ImageView img;
