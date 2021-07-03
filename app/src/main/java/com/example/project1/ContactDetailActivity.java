@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ public class ContactDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //calling a method to make a call.
+                //Log.d("Contact", "전화 눌렸니"+contactNumber);-> 응
                 makeCall(contactNumber);
             }
         });
@@ -62,14 +64,14 @@ public class ContactDetailActivity extends AppCompatActivity {
     private void makeCall(String contactNumber) {
         //this method is called for making a call.
         //on below line we are calling an intent to make a call.
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        Intent callIntent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:" + contactNumber));
         //on below line we are setting data to it.
-        callIntent.setData(Uri.parse("tel:" + contactNumber));
+        //callIntent.setData(Uri.parse("tel:" + contactNumber));
         //on below line we are checking if the calling permissions are grantedor not.
-        if (ActivityCompat.checkSelfPermission(ContactDetailActivity.this,
-                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            return;
-        }
+//        if (ActivityCompat.checkSelfPermission(ContactDetailActivity.this,
+//                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+//            return;
+//        }
         //at last we are starting activity.
         startActivity(callIntent);
     }
