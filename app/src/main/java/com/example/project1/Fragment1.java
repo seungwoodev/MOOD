@@ -53,10 +53,6 @@ public class Fragment1 extends Fragment {
         contactRV = view.findViewById(R.id.idRVContacts);
         //on below line we are setting layout mnager.
         contactRV.setLayoutManager(new LinearLayoutManager(getContext()));
-        contactRVAdapter = new ContactRVAdapter(contactsModalArrayList);
-        //on below line we are setting adapter to our recycler view.
-        contactRV.setAdapter(contactRVAdapter);
-
         loadingPB = view.findViewById(R.id.idPBLoading);
 
         getContacts();
@@ -73,13 +69,20 @@ public class Fragment1 extends Fragment {
 
             }
         });
+        contactRVAdapter = new ContactRVAdapter(contactsModalArrayList);
+        //on below line we are setting adapter to our recycler view.
+        contactRV.setAdapter(contactRVAdapter);
+
         return view;
     }
     public static Fragment1 newInstance() {
         return new Fragment1();
     }
 
-
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
     //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        //in this on create options menu we are calling a menu inflater and inflating our menu file.

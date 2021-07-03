@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Fragment1_add"/>
+        <activity android:name="ContactDetailActivity"/>
     </application>
 
 </manifest>

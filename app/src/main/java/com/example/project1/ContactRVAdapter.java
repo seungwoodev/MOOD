@@ -21,6 +21,7 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
     private Context context;
     private ArrayList<PhoneBook> mList = null ;
     public MainActivity activity;
+    int position;
 
     public void onAttach(Activity activity){
         this.activity= (MainActivity) activity;
@@ -67,6 +68,7 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
     // onBindViewHolder() - position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
     @Override
     public void onBindViewHolder(ContactRVAdapter.ViewHolder holder, int position) {
+        this.position=position;
         PhoneBook modal = mList.get(position);
         holder.name.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         holder.phnum.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
@@ -78,19 +80,21 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
         //holder.img.setImageResource(R.drawable.per);
         holder.name.setText(mList.get(position).getName()) ;
         holder.phnum.setText(mList.get(position).getNum()) ;
-
+        
+        //여기 클릭 리스너 넣으면 라이프 사이클 때문에 안 됨\
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //on below line we are opening a new activity and passing data to it.
                 Log.d("ContactRVAdapter", "리사이클러뷰 아이템 누름"+position);
-//                Intent i = new Intent(activity, ContactDetailActivity.class);
-//                i.putExtra("name", modal.getName());
-//                i.putExtra("contact", modal.getNum());
-//                //on below line we are starting a new activity,
-//                context.startActivity(i);
+                Intent i = new Intent(holder.itemView.getContext(), ContactDetailActivity.class);
+                i.putExtra("name", modal.getName());
+                i.putExtra("contact", modal.getNum());
+                //on below line we are starting a new activity,
+                holder.itemView.getContext().startActivity(i);
             }
         });
+
     }
 
     // getItemCount() - 전체 데이터 갯수 리턴.
