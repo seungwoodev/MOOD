@@ -37,12 +37,17 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
     private ArrayList<Uri> listData = new ArrayList<>();
     Context context;
     Activity activity;
+    ArrayList<Integer> nameList;
+    ArrayList<Integer> sizeList;
 
     public RecyclerAdapter(Context context, Activity activity){
         this.context=context;
         this.activity=activity;
     }
-
+//    public void setfileandsize(ArrayList<int> nlist, ArrayList<int> slist){
+//        //this.nameList=nlist;
+//        //this.sizeList=slist;
+//    }
 
     @NonNull
     @Override

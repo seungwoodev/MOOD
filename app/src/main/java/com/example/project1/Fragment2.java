@@ -16,6 +16,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.provider.OpenableColumns;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -174,6 +175,12 @@ public class Fragment2 extends Fragment{
 //                    imageView.setImageBitmap(imgBitmap);    // 선택한 이미지 이미지뷰에 셋
                         instream.close();   // 스트림 닫아주기
                         saveBitmapToJpeg(imgBitmap);    // 내부 저장소에 저장
+
+                        int nameIndex = resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                        int sizeIndex = resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.SIZE);
+
+
+
                     }
                     Toast.makeText(getActivity().getApplicationContext(), "파일 불러오기 성공", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
