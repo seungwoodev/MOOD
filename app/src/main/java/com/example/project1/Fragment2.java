@@ -1,14 +1,21 @@
 package com.example.project1;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,9 +39,8 @@ public class Fragment2 extends Fragment{
     String imgName = "osz.png";    // 이미지 이름
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private RecyclerAdapter adapter;
 
-    String imageEncoded;
-    List<String> imagesEncodedList;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -66,21 +72,34 @@ public class Fragment2 extends Fragment{
         return inflater.inflate(R.layout.fragment_2, container, false);
     }
 
+
+    private void init() {
+        RecyclerView recyclerView = getView().findViewById(R.id.recyclerView);
+
+        int numberOfColumns = 3;
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), numberOfColumns));
+        recyclerView.addItemDecoration(new RecyclerViewDecoration(1));
+
+        adapter = new RecyclerAdapter();
+        recyclerView.setAdapter(adapter);
+    }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.v(TAG, "Gallery process...");
 
-        imageView = getView().findViewById(R.id.imageView);
+//        imageView = getView().findViewById(R.id.imageView);
 
         try {
             String imgpath = getActivity().getCacheDir() + "/" + imgName;   // 내부 저장소에 저장되어 있는 이미지 경로
             Bitmap bm = BitmapFactory.decodeFile(imgpath);
-            imageView.setImageBitmap(bm);   // 내부 저장소에 저장된 이미지를 이미지뷰에 셋
+//            imageView.setImageBitmap(bm);   // 내부 저장소에 저장된 이미지를 이미지뷰에 셋
             Toast.makeText(getActivity().getApplicationContext(), "파일 로드 성공", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Toast.makeText(getActivity().getApplicationContext(), "파일 로드 실패", Toast.LENGTH_SHORT).show();
         }
+
 
         Button bt1 = getView().findViewById(R.id.button);
         bt1.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +110,7 @@ public class Fragment2 extends Fragment{
                 intent.setType("image/*");
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent, 101);
+                startActivityForResult(intent, 1);
             }
         });
 
@@ -124,29 +143,42 @@ public class Fragment2 extends Fragment{
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, 101);
+        intent.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        Log.d("intent type: ", intent+"\n");
+        startActivityForResult(intent, 1);
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) { // 갤러리
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 101) {
+
+        if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
-                Uri fileUri = data.getData();
+                init();
+                ClipData clip = data.getClipData();
+
+                for (int i=clip.getItemCount()-1; i >= 0; i--) {
+                    Uri fileUri = clip.getItemAt(i).getUri();
+                    adapter.addItem(fileUri);
+                }
                 ContentResolver resolver = getActivity().getContentResolver();
                 try {
-                    InputStream instream = resolver.openInputStream(fileUri);
-                    Bitmap imgBitmap = BitmapFactory.decodeStream(instream);
-                    imageView.setImageBitmap(imgBitmap);    // 선택한 이미지 이미지뷰에 셋
-                    instream.close();   // 스트림 닫아주기
-                    saveBitmapToJpeg(imgBitmap);    // 내부 저장소에 저장
+                    for (int i=clip.getItemCount()-1; i >= 0; i--){
+                        Uri fileUri = clip.getItemAt(i).getUri();
+                        InputStream instream = resolver.openInputStream(fileUri);
+                        Bitmap imgBitmap = BitmapFactory.decodeStream(instream);
+//                    imageView.setImageBitmap(imgBitmap);    // 선택한 이미지 이미지뷰에 셋
+                        instream.close();   // 스트림 닫아주기
+                        saveBitmapToJpeg(imgBitmap);    // 내부 저장소에 저장
+                    }
                     Toast.makeText(getActivity().getApplicationContext(), "파일 불러오기 성공", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     Toast.makeText(getActivity().getApplicationContext(), "파일 불러오기 실패", Toast.LENGTH_SHORT).show();
                 }
             }
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void saveBitmapToJpeg(Bitmap bitmap) {   // 선택한 이미지 내부 저장소에 저장

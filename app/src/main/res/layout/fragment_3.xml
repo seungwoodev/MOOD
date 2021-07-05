@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
     <Button
-        android:id="@+id/f1_btn"
+        android:id="@+id/f3_btn"
         android:layout_width="100dp"
         android:layout_height="200dp"
         />
