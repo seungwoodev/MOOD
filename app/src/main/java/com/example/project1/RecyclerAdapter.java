@@ -40,14 +40,17 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
     ArrayList<Integer> nameList;
     ArrayList<Integer> sizeList;
 
+    TextView textView;
+    ImageView iv;
+
     public RecyclerAdapter(Context context, Activity activity){
         this.context=context;
         this.activity=activity;
     }
-//    public void setfileandsize(ArrayList<int> nlist, ArrayList<int> slist){
-//        //this.nameList=nlist;
-//        //this.sizeList=slist;
-//    }
+    public void setfileandsize(ArrayList<Integer> nlist, ArrayList<Integer> slist){
+        this.nameList=nlist;
+        this.sizeList=slist;
+    }
 
     @NonNull
     @Override
@@ -77,11 +80,13 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
                 LayoutInflater factory = LayoutInflater.from(context);
                 final View view = factory.inflate(R.layout.sample, null);
                 alertadd.setView(view);
-                ImageView iv=view.findViewById(R.id.dialog_imageview);
+                iv=view.findViewById(R.id.dialog_imageview);
+                textView=view.findViewById(R.id.photo_name);
 
                 //여기서 SET
                 iv.setImageURI(listData.get(position));
-
+                // null object reference
+                //textView.setText(nameList.get(position));
 
                 alertadd.show();
 
@@ -117,6 +122,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
         }
 
         void onBind(Uri uri) {
+
             imageView.setImageURI(uri);
         }
 

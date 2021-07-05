@@ -29,6 +29,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
@@ -43,6 +44,9 @@ public class Fragment2 extends Fragment{
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private RecyclerAdapter adapter;
+
+    ArrayList<Integer> nameList;
+    ArrayList<Integer> sizeList;
 
 
     // TODO: Rename and change types of parameters
@@ -176,10 +180,8 @@ public class Fragment2 extends Fragment{
                         instream.close();   // 스트림 닫아주기
                         saveBitmapToJpeg(imgBitmap);    // 내부 저장소에 저장
 
-                        int nameIndex = resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.DISPLAY_NAME);
-                        int sizeIndex = resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.SIZE);
-
-
+                        nameList.add(resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                        sizeList.add(resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.SIZE));
 
                     }
                     Toast.makeText(getActivity().getApplicationContext(), "파일 불러오기 성공", Toast.LENGTH_SHORT).show();
@@ -188,6 +190,7 @@ public class Fragment2 extends Fragment{
                 }
             }
         }
+        adapter.setfileandsize(nameList, sizeList);
         super.onActivityResult(requestCode, resultCode, data);
     }
 
