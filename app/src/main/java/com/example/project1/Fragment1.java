@@ -40,7 +40,7 @@ import java.util.List;
 
 public class Fragment1 extends Fragment {
     //creating variables for our array list, recycler view progress bar and adapter.
-    private ArrayList<PhoneBook> contactsModalArrayList;
+    private ArrayList<PhoneBook> contactsModalArrayList = new ArrayList<>();
     private RecyclerView contactRV;
     private ContactRVAdapter contactRVAdapter;
     private ProgressBar loadingPB;
@@ -49,8 +49,6 @@ public class Fragment1 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //on below line we are initializing our variables.
-        contactsModalArrayList = new ArrayList<>();
     }
 
     @Nullable
