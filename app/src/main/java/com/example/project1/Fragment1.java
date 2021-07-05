@@ -22,6 +22,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -58,6 +59,7 @@ public class Fragment1 extends Fragment {
         contactRV = view.findViewById(R.id.idRVContacts);
         //on below line we are setting layout mnager.
         contactRV.setLayoutManager(new LinearLayoutManager(getContext()));
+        contactRV.addItemDecoration(new DividerItemDecoration(view.getContext(), 1));
         loadingPB = view.findViewById(R.id.idPBLoading);
 
         //calling a method to request permissions.
@@ -81,6 +83,11 @@ public class Fragment1 extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        contactsModalArrayList = new ArrayList<>();
+    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
