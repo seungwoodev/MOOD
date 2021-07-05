@@ -20,7 +20,7 @@ public class VPAdapter extends FragmentPagerAdapter {
 
         itext.add("프로필");
         itext.add("갤러리");
-        itext.add("기타");
+        itext.add("음악");
     }
     @Nullable
     @Override

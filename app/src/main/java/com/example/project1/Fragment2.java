@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -36,6 +37,7 @@ public class Fragment2 extends Fragment{
     private static final String TAG = "Fragment2";
 
     ImageView imageView;
+    TextView textView;
     String imgName = "osz.png";    // 이미지 이름
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -63,6 +65,7 @@ public class Fragment2 extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
 
@@ -80,7 +83,7 @@ public class Fragment2 extends Fragment{
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), numberOfColumns));
         recyclerView.addItemDecoration(new RecyclerViewDecoration(1));
 
-        adapter = new RecyclerAdapter();
+        adapter = new RecyclerAdapter(getContext(), getActivity());
         recyclerView.setAdapter(adapter);
     }
 

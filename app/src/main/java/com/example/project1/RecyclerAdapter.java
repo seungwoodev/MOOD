@@ -1,14 +1,33 @@
 package com.example.project1;
 
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.provider.ContactsContract;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 
 import java.util.ArrayList;
 
@@ -16,6 +35,14 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
 
     // adapter에 들어갈 list 입니다.
     private ArrayList<Uri> listData = new ArrayList<>();
+    Context context;
+    Activity activity;
+
+    public RecyclerAdapter(Context context, Activity activity){
+        this.context=context;
+        this.activity=activity;
+    }
+
 
     @NonNull
     @Override
@@ -31,7 +58,34 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         // Item을 하나, 하나 보여주는(bind 되는) 함수입니다.
         holder.onBind(listData.get(position));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //on below line we are opening a new activity and passing data to it.
+                Log.d("ContactRVAdapter", "리사이클러뷰 아이템 누름"+position);
+
+                //Toast.makeText(context, "fkfkf", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertadd = new AlertDialog.Builder(context);
+                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+
+                LayoutInflater factory = LayoutInflater.from(context);
+                final View view = factory.inflate(R.layout.sample, null);
+                alertadd.setView(view);
+                ImageView iv=view.findViewById(R.id.dialog_imageview);
+
+                //여기서 SET
+                iv.setImageURI(listData.get(position));
+
+
+                alertadd.show();
+
+            }
+        });
+
+
     }
+
 
     @Override
     public int getItemCount() {
