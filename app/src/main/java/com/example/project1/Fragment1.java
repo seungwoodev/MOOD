@@ -258,7 +258,9 @@ public class Fragment1 extends Fragment {
                     if (phoneCursor.moveToNext()) {
                         //on below line we are getting the phone number for our users and then adding the name along with phone number in array list.
                         String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                        contactsModalArrayList.add(new PhoneBook(displayName, phoneNumber));
+                        if(phoneNumber.startsWith("01")) {
+                            contactsModalArrayList.add(new PhoneBook(displayName, phoneNumber));
+                        }
                     }
                     //on below line we are closing our phone cursor.
                     phoneCursor.close();
