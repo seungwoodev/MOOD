@@ -39,6 +39,8 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller;
+
 public class Fragment1 extends Fragment {
     //creating variables for our array list, recycler view progress bar and adapter.
     private ArrayList<PhoneBook> contactsModalArrayList = new ArrayList<>();
@@ -60,6 +62,14 @@ public class Fragment1 extends Fragment {
         //on below line we are setting layout mnager.
         contactRV.setLayoutManager(new LinearLayoutManager(getContext()));
         contactRV.addItemDecoration(new DividerItemDecoration(view.getContext(), 1));
+
+
+
+        VerticalRecyclerViewFastScroller fastScroller = (VerticalRecyclerViewFastScroller) view.findViewById(R.id.fast_scroller);
+        fastScroller.setRecyclerView(contactRV);
+
+        contactRV.setOnScrollListener(fastScroller.getOnScrollListener());
+
         loadingPB = view.findViewById(R.id.idPBLoading);
 
         //calling a method to request permissions.

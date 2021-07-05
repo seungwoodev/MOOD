@@ -5,7 +5,6 @@
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <ImageView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/item_image"
@@ -15,27 +14,36 @@
         app:srcCompat="@drawable/per"
         android:layout_margin="5dp"
         />
-
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="match_parent"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/item_name"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="홍길동"
-        android:gravity="center"
-        android:textSize="20sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
 
-    <TextView
-        android:id="@+id/item_phonenum"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="010-1234-5678"
-        android:gravity="center"
-        android:textSize="10sp" />
-
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="홍길동"
+            android:gravity="left"
+            android:textSize="20sp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            />
+        <TextView
+            android:id="@+id/item_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="010-1234-5678"
+            android:gravity="left"
+            android:textSize="16sp" />
     </LinearLayout>
+
+
 
 </LinearLayout>

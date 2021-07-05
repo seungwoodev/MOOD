@@ -70,13 +70,9 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
     // onBindViewHolder() - position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
     @Override
     public void onBindViewHolder(ContactRVAdapter.ViewHolder holder, int position) {
-        this.position=position;
         PhoneBook modal = mList.get(position);
-        holder.name.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        holder.phnum.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
 
-        holder.name.setGravity(Gravity.CENTER);
-        holder.phnum.setGravity(Gravity.LEFT);
+        holder.name.setSelected(true);
 
         ColorGenerator generator = ColorGenerator.MATERIAL; // or use DEFAULT
         // generate random color
