@@ -36,7 +36,10 @@
 - 연락처 및 갤러리 연동
 - 위치, 날씨 기반 음악 추천 및 유튜브 연동
 
+## **Setup**
 
+
+Download and install app/release/app-release.apk
 
 
 
