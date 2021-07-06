@@ -13,7 +13,7 @@
 
 ## Development Environment
 
-### * Android Studio 4.1.2
+### *Android Studio 4.1.2*
 
   * compileSDKversion : 30
   * buildToolsversion : 30.0.3
