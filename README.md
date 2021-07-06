@@ -1,7 +1,7 @@
 # MOOD
 **KAIST MADCAMP CS496 Project1**
 
-**+) apk 파일 위치 :**
+**+) apk 파일 위치 : app/releases/app-release.apk**
 
 
 
@@ -48,15 +48,19 @@ Download and install app/release/app-release.apk
 ### 
 ### - 시작 화면
 <img src="https://user-images.githubusercontent.com/68985625/124556474-47ac1f80-de73-11eb-8aae-cb06a952454c.jpg"/>
+- splash로 로고를 띄운다.
 
 ### 
 ### - 연락처
 #### 기능 - 연락처 생성, 저장, 불러오기, 전화, 메세지
 <img width=30% alt="contact" src="https://user-images.githubusercontent.com/68985625/124556328-1fbcbc00-de73-11eb-9f1c-450ed4f8e754.png">   <img width=30% alt="contact_add" src="https://user-images.githubusercontent.com/68985625/124556335-221f1600-de73-11eb-9b72-0b53f9a988d7.png">
+- 이름순으로 정렬된 연락처를 recyclerview를 통해 보여준다.
+- 우측 하단의 floatingbutton을 클릭하면 새로운 연락처의 이름, 전화번호, 이메일을 추가하여 local의 연락처 추가로 연결한다.
 
 
 <img width=30% alt="contact_info" src="https://user-images.githubusercontent.com/68985625/124556345-24817000-de73-11eb-889c-85c146bfda6d.png">   <img width=30% alt="contact_call" src="https://user-images.githubusercontent.com/68985625/124556342-23504300-de73-11eb-8dee-7f489a9e5ccf.png">   <img width=30% alt="contact_text" src="https://user-images.githubusercontent.com/68985625/124556352-251a0680-de73-11eb-9dd8-517e0f3ea019.png">
-
+- 연락처 클릭 시 intent를 이용하여 세부 정보가 있는 activity로 들어온다.
+- 전화 버튼을 누르면 전화로, 문자 버튼을 누르면 문자로 연결된다.
 
 
 ### 
@@ -66,11 +70,13 @@ Download and install app/release/app-release.apk
 
 
 <img width=30% alt="gallery" src="https://user-images.githubusercontent.com/68985625/124556353-25b29d00-de73-11eb-8496-351ff22615ee.png">   <img width=30% alt="gallery_in" src="https://user-images.githubusercontent.com/68985625/124556379-2d724180-de73-11eb-9eec-49ff9b08bb6e.png">   <img width=30% alt="gallery_in2" src="https://user-images.githubusercontent.com/68985625/124556410-3400b900-de73-11eb-861b-b011fd787f8e.png">
+- 갤러리 탭으로 들어오면 하단의 이미지 선택 버튼을 통해 local gallery에 접근한다.
+
 
 
 <img width=30% alt="gallery_select" src="https://user-images.githubusercontent.com/68985625/124556412-3531e600-de73-11eb-9d0e-ea2f9df97d20.png">   <img width=30% alt="gallery_show" src="https://user-images.githubusercontent.com/68985625/124556433-3a8f3080-de73-11eb-90b7-1fafb47dded9.png">   <img width=30% alt="gallery_click" src="https://user-images.githubusercontent.com/68985625/124556354-264b3380-de73-11eb-9ee7-46dd527ec48f.png">
-
-
+- 원하는 이미지를 다중 선택한 뒤, 상단의 Done 버튼을 클릭한다.
+- 이후 Toast와 함께 선택한 이미지들이 GridView로 보여진다.
 
 
 ### 
