@@ -61,7 +61,7 @@ Download and install app/release/app-release.apk
 
 ### 
 ### - 갤러리
-#### 기능 - 구글포토에서 사진 선택, 저장된 사진 확대
+#### 기능 - 로컬 갤러리 또는 구글포토에서 사진 선택, 저장된 사진 확대
 #### recycler_view & grid_manager 사용
 
 
