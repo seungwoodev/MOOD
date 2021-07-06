@@ -1,7 +1,7 @@
 # MOOD
 **MADCAMP Project1**
 
-**+) apk 파일 위치 : **
+**+) apk 파일 위치 :**
 
 
 
