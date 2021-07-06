@@ -46,8 +46,8 @@
 ### - 시작 화면
 <img src="https://user-images.githubusercontent.com/68985625/124556474-47ac1f80-de73-11eb-8aae-cb06a952454c.jpg"/>
 
-
-### - 연락처 화면
+### 
+### - 연락처
 <img width=30% alt="contact" src="https://user-images.githubusercontent.com/68985625/124556328-1fbcbc00-de73-11eb-9f1c-450ed4f8e754.png">   <img width=30% alt="contact_add" src="https://user-images.githubusercontent.com/68985625/124556335-221f1600-de73-11eb-9b72-0b53f9a988d7.png">
 
 
@@ -55,8 +55,10 @@
 
 
 
-
-### - 갤러리 화면
+### 
+### - 갤러리
+#### 기능 - 구글포토에서 사진 선택, 저장된 사진 확대
+#### recycler_view & grid_manager 사용
 
 
 <img width=30% alt="gallery" src="https://user-images.githubusercontent.com/68985625/124556353-25b29d00-de73-11eb-8496-351ff22615ee.png">   <img width=30% alt="gallery_in" src="https://user-images.githubusercontent.com/68985625/124556379-2d724180-de73-11eb-9eec-49ff9b08bb6e.png">   <img width=30% alt="gallery_in2" src="https://user-images.githubusercontent.com/68985625/124556410-3400b900-de73-11eb-861b-b011fd787f8e.png">
@@ -67,10 +69,13 @@
 
 
 
-### - 음악 화면
+### 
+### - 음악
+#### 기능 - 현재 위치 및 날씨 표시, 유튜브 음악 추천
+#### GPS tracker & OpenWeather API, action_view  사용
 <img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124564584-2c91dd80-de7c-11eb-91a5-2b738855c9c7.png">  <img width=30% alt="music_show" src="https://user-images.githubusercontent.com/68985625/124564594-2ef43780-de7c-11eb-92bb-46bd1621daf7.png">  <img width=30% alt="music_connect" src="https://user-images.githubusercontent.com/68985625/124564589-2dc30a80-de7c-11eb-9e62-e9d2f1543ab7.png">
- 
- 
+
+## 
 ## **실행 gif**
 
 ./시연영상.mp4
