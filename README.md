@@ -43,12 +43,13 @@
 ## **실행 화면**
 
 ### 
-### - 시작 화면
+### 시작 화면
 <img src="https://user-images.githubusercontent.com/68985625/124556474-47ac1f80-de73-11eb-8aae-cb06a952454c.jpg"/>
 - splash로 로고를 띄운다.
 
 ### 
-### - 연락처
+### 연락처
+#### - 연락처 연동 및 생성, 추가
 <img width=30% alt="contact" src="https://user-images.githubusercontent.com/68985625/124556328-1fbcbc00-de73-11eb-9f1c-450ed4f8e754.png">   <img width=30% alt="contact_add" src="https://user-images.githubusercontent.com/68985625/124556335-221f1600-de73-11eb-9b72-0b53f9a988d7.png">
 - 이름순으로 정렬된 연락처를 recyclerview를 통해 보여준다.
 - 우측 하단의 floatingbutton을 클릭하면 새로운 연락처의 이름, 전화번호, 이메일을 추가하여 local의 연락처 추가로 연결한다.
@@ -61,7 +62,7 @@
 
 ### 
 ### 갤러리
-#### - 구글포토에서 사진 선택, 저장된 사진 확대
+#### - 갤러리 연동 및 사진 선택, 저장된 사진 확대
 
 
 <img width=30% alt="gallery" src="https://user-images.githubusercontent.com/68985625/124556353-25b29d00-de73-11eb-8496-351ff22615ee.png">   <img width=30% alt="gallery_in" src="https://user-images.githubusercontent.com/68985625/124556379-2d724180-de73-11eb-9eec-49ff9b08bb6e.png">   <img width=30% alt="gallery_in2" src="https://user-images.githubusercontent.com/68985625/124556410-3400b900-de73-11eb-861b-b011fd787f8e.png">
