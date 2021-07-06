@@ -17,7 +17,7 @@
 
   * compileSDKversion : 30
   * buildToolsversion : 30.0.3
-  * SDK 16(API Level 30) 기준 호환
+  * SDK 16(API Level 29) 기준 호환
 
 
 
