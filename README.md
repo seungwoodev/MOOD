@@ -71,7 +71,7 @@
 
 ### 
 ### - 음악
-#### 기능 - 위치 정보 받아와서 주소 및 해당 지역 날씨 띄우기, 해당 날씨에 어울리는 음악 추천
+#### 기능 - 현재 위치 및 날씨 표시, 유튜브 음악 추천
 #### GPS tracker & OpenWeather API, action_view  사용
 <img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124564584-2c91dd80-de7c-11eb-91a5-2b738855c9c7.png">  <img width=30% alt="music_show" src="https://user-images.githubusercontent.com/68985625/124564594-2ef43780-de7c-11eb-92bb-46bd1621daf7.png">  <img width=30% alt="music_connect" src="https://user-images.githubusercontent.com/68985625/124564589-2dc30a80-de7c-11eb-9e62-e9d2f1543ab7.png">
 
