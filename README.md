@@ -64,26 +64,12 @@
 
 
 ### - 갤러리 화면
-<div style="float: left; width: 30%;">
-<img src="https://user-images.githubusercontent.com/68985625/124529417-8a570300-de45-11eb-9318-848f5b12dce4.jpg"/>
-</div>
-<div style="float: left; width: 30%;">
-<img src="https://user-images.githubusercontent.com/68985625/124529419-8a570300-de45-11eb-8c24-563fad017674.jpg"/>
-</div>
-<div style="float: left; width: 30%;">
-<img src="https://user-images.githubusercontent.com/68985625/124529420-8aef9980-de45-11eb-8b72-b51fbfa017cd.jpg"/>
-</div>
+<img width=30% src="https://user-images.githubusercontent.com/68985625/124529417-8a570300-de45-11eb-9318-848f5b12dce4.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529419-8a570300-de45-11eb-8c24-563fad017674.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529420-8aef9980-de45-11eb-8b72-b51fbfa017cd.jpg"/>
 
 
 
 ### - 음악 화면
-
-<div style="float: left; width: 30%;">
-</div>
-<div style="float: left; width: 30%;">
-
-</div>
-<div style="float: left; width: 30%;">
+<img width=30% />
 
  
  
