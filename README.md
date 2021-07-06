@@ -60,8 +60,8 @@
 
 
 ### 
-### - 갤러리
-#### 기능 - 구글포토에서 사진 선택, 저장된 사진 확대
+### 갤러리
+#### - 구글포토에서 사진 선택, 저장된 사진 확대
 
 
 <img width=30% alt="gallery" src="https://user-images.githubusercontent.com/68985625/124556353-25b29d00-de73-11eb-8496-351ff22615ee.png">   <img width=30% alt="gallery_in" src="https://user-images.githubusercontent.com/68985625/124556379-2d724180-de73-11eb-9eec-49ff9b08bb6e.png">   <img width=30% alt="gallery_in2" src="https://user-images.githubusercontent.com/68985625/124556410-3400b900-de73-11eb-861b-b011fd787f8e.png">
@@ -76,9 +76,9 @@
 
 
 ### 
-### - 음악
-#### 기능 - 현재 위치 및 날씨 표시, 유튜브 음악 추천 및 썸네일 표시, 해당 화면 실행
-#### search keyword = weather_description + "weather music"
+### 음악
+#### - 현재 위치 및 날씨 표시, 유튜브 음악 추천 및 썸네일 표시, 해당 화면 실행
+#### - search keyword = weather_description + "weather music"
 <img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124564584-2c91dd80-de7c-11eb-91a5-2b738855c9c7.png">  <img width=30% alt="music_show" src="https://user-images.githubusercontent.com/68985625/124564594-2ef43780-de7c-11eb-92bb-46bd1621daf7.png">  <img width=30% alt="music_connect" src="https://user-images.githubusercontent.com/68985625/124564589-2dc30a80-de7c-11eb-9e62-e9d2f1543ab7.png">
 - 하단의 음악 추천 버튼을 클릭하면 GPS tracker & OpenWeather API, action_view를 사용하여 현재 위치와 날씨가 나타나고, 날씨에 해당하는 이미지 또한 나타난다.
 - 버튼의 위에는 날씨에 맞는 유투브 썸네일이 보여지며, 하단의 유투브로 이동 버튼을 클릭하면 intent를 통해 Youtube에서 해당 동영상이 열린다.
