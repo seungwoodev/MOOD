@@ -64,12 +64,17 @@
 
 <img width=30% alt="gallery_select" src="https://user-images.githubusercontent.com/68985625/124556412-3531e600-de73-11eb-9d0e-ea2f9df97d20.png">   <img width=30% alt="gallery_show" src="https://user-images.githubusercontent.com/68985625/124556433-3a8f3080-de73-11eb-90b7-1fafb47dded9.png">   <img width=30% alt="gallery_click" src="https://user-images.githubusercontent.com/68985625/124556354-264b3380-de73-11eb-9ee7-46dd527ec48f.png">
 
+# 기능 - 구글포토에서 사진 선택, 저장된 사진 확대
+# recycler_view & grid_manager 사용
+
 
 
 
 ### - 음악 화면
 <img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124564584-2c91dd80-de7c-11eb-91a5-2b738855c9c7.png">  <img width=30% alt="music_show" src="https://user-images.githubusercontent.com/68985625/124564594-2ef43780-de7c-11eb-92bb-46bd1621daf7.png">  <img width=30% alt="music_connect" src="https://user-images.githubusercontent.com/68985625/124564589-2dc30a80-de7c-11eb-9e62-e9d2f1543ab7.png">
- 
+
+# 기능 - 위치 정보 받아와서 주소 및 해당 지역 날씨 띄우기, 해당 날씨에 어울리는 음악 추천
+# GPS tracker & OpenWeather API, action_view  사용
  
 ## **실행 gif**
 
