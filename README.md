@@ -68,9 +68,7 @@
 
 
 ### - 음악 화면
-<img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124556454-411da800-de73-11eb-8cb5-95693b4c53cf.png">  <img width=30% alt="music_show1" src="https://user-images.githubusercontent.com/68985625/124556457-41b63e80-de73-11eb-929d-ad083e727406.png">  <img width=30% alt="music_show2" src="https://user-images.githubusercontent.com/68985625/124556469-45e25c00-de73-11eb-9319-f6ebf66406a5.png">
-
-
+<img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124564584-2c91dd80-de7c-11eb-91a5-2b738855c9c7.png">  <img width=30% alt="music_connect" src="https://user-images.githubusercontent.com/68985625/124564589-2dc30a80-de7c-11eb-9e62-e9d2f1543ab7.png">  <img width=30% alt="music_show" src="https://user-images.githubusercontent.com/68985625/124564594-2ef43780-de7c-11eb-92bb-46bd1621daf7.png">
  
  
 ## **실행 gif**
