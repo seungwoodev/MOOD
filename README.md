@@ -73,10 +73,5 @@
  
 ## **실행 gif**
 
-
-<video muted autoplay loop>
-      <source src="https://user-images.githubusercontent.com/68985625/124593238-5c031300-de99-11eb-90f6-ba892d14df5d.mp4" type="video/mp4">
-    </video>
-  
-
+./시연영상.mp4
   
