@@ -36,10 +36,7 @@
 - 연락처 및 갤러리 연동
 - 위치, 날씨 기반 음악 추천 및 유튜브 연동
 
-## **Setup**
 
-
-Download and install app/release/app-release.apk
 
 
 
@@ -52,7 +49,6 @@ Download and install app/release/app-release.apk
 
 ### 
 ### - 연락처
-#### 기능 - 연락처 생성, 저장, 불러오기, 전화, 메세지
 <img width=30% alt="contact" src="https://user-images.githubusercontent.com/68985625/124556328-1fbcbc00-de73-11eb-9f1c-450ed4f8e754.png">   <img width=30% alt="contact_add" src="https://user-images.githubusercontent.com/68985625/124556335-221f1600-de73-11eb-9b72-0b53f9a988d7.png">
 - 이름순으로 정렬된 연락처를 recyclerview를 통해 보여준다.
 - 우측 하단의 floatingbutton을 클릭하면 새로운 연락처의 이름, 전화번호, 이메일을 추가하여 local의 연락처 추가로 연결한다.
@@ -65,7 +61,7 @@ Download and install app/release/app-release.apk
 
 ### 
 ### - 갤러리
-#### 기능 - 로컬 갤러리 또는 구글포토에서 사진 선택, 저장된 사진 확대
+#### 기능 - 구글포토에서 사진 선택, 저장된 사진 확대
 #### recycler_view & grid_manager 사용
 
 
@@ -85,6 +81,9 @@ Download and install app/release/app-release.apk
 #### GPS tracker & OpenWeather API, action_view  사용
 #### search keyword = weather_description + "weather music"
 <img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124564584-2c91dd80-de7c-11eb-91a5-2b738855c9c7.png">  <img width=30% alt="music_show" src="https://user-images.githubusercontent.com/68985625/124564594-2ef43780-de7c-11eb-92bb-46bd1621daf7.png">  <img width=30% alt="music_connect" src="https://user-images.githubusercontent.com/68985625/124564589-2dc30a80-de7c-11eb-9e62-e9d2f1543ab7.png">
+- 하단의 음악 추천 버튼을 클릭하면 GPS tracker & OpenWeather API, action_view를 사용하여 현재 위치와 날씨가 나타나고, 날씨에 해당하는 이미지 또한 나타난다.
+- 버튼의 위에는 날씨에 맞는 유투브 썸네일이 보여지며, 하단의 유투브로 이동 버튼을 클릭하면 intent를 통해 Youtube에서 해당 동영상이 열린다.
+
 
 ## 
 ## **실행 gif**
