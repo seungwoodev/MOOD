@@ -25,6 +25,7 @@
 
 
 ## **App Logo**
+<div>
 <div style="float: left; width: 30%;">
 <img src="https://user-images.githubusercontent.com/68985625/124529645-fe91a680-de45-11eb-9b88-8490d8b4d77e.jpg"/>
 </div>
@@ -34,7 +35,7 @@
 <div style="float: left; width: 30%;">
 
 </div>
-
+</div>
 
 # 
 ## **Introduction**
@@ -52,6 +53,7 @@
 
 ### 
 ### - 시작 화면
+<div>
 <div style="float: left; width: 30%;">
 <img src="https://user-images.githubusercontent.com/68985625/124529421-8c20c680-de45-11eb-9a8b-af19b6ab1c78.jpg"/>
 </div>
@@ -60,6 +62,7 @@
 </div>
 <div style="float: left; width: 30%;">
 
+</div>
 </div>
 
 
