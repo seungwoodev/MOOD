@@ -62,7 +62,6 @@
 ### 
 ### - 갤러리
 #### 기능 - 구글포토에서 사진 선택, 저장된 사진 확대
-#### RecyclerView & GridLayoutManager 사용
 
 
 <img width=30% alt="gallery" src="https://user-images.githubusercontent.com/68985625/124556353-25b29d00-de73-11eb-8496-351ff22615ee.png">   <img width=30% alt="gallery_in" src="https://user-images.githubusercontent.com/68985625/124556379-2d724180-de73-11eb-9eec-49ff9b08bb6e.png">   <img width=30% alt="gallery_in2" src="https://user-images.githubusercontent.com/68985625/124556410-3400b900-de73-11eb-861b-b011fd787f8e.png">
@@ -72,7 +71,7 @@
 
 <img width=30% alt="gallery_select" src="https://user-images.githubusercontent.com/68985625/124556412-3531e600-de73-11eb-9d0e-ea2f9df97d20.png">   <img width=30% alt="gallery_show" src="https://user-images.githubusercontent.com/68985625/124556433-3a8f3080-de73-11eb-90b7-1fafb47dded9.png">   <img width=30% alt="gallery_click" src="https://user-images.githubusercontent.com/68985625/124556354-264b3380-de73-11eb-9ee7-46dd527ec48f.png">
 - 원하는 이미지를 다중 선택한 뒤, 상단의 Done 버튼을 클릭한다.
-- 이후 Toast와 함께 선택한 이미지들이 Grid로 보여진다.
+- 이후 Toast와 함께 선택한 이미지들이 RecyclerView & GridLayoutManager에 의해 Grid로 보여진다.
 - 이미지가 화면을 벗어나면 scroll을 사용한다.
 
 
