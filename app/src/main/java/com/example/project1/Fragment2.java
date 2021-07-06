@@ -45,8 +45,6 @@ public class Fragment2 extends Fragment{
     private static final String ARG_PARAM2 = "param2";
     private RecyclerAdapter adapter;
 
-    ArrayList<Integer> nameList;
-    ArrayList<Integer> sizeList;
 
 
     // TODO: Rename and change types of parameters
@@ -121,26 +119,26 @@ public class Fragment2 extends Fragment{
                 startActivityForResult(intent, 1);
             }
         });
-
-        Button bt2 = getView().findViewById(R.id.button2);
-        bt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // TODO : click event
-                try {
-                    File file = getActivity().getCacheDir();  // 내부저장소 캐시 경로를 받아오기
-                    File[] flist = file.listFiles();
-                    for (int i = 0; i < flist.length; i++) {    // 배열의 크기만큼 반복
-                        if (flist[i].getName().equals(imgName)) {   // 삭제하고자 하는 이름과 같은 파일명이 있으면 실행
-                            flist[i].delete();  // 파일 삭제
-                            Toast.makeText(getActivity().getApplicationContext(), "파일 삭제 성공", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                } catch (Exception e) {
-                    Toast.makeText(getActivity().getApplicationContext(), "파일 삭제 실패", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+//
+//        Button bt2 = getView().findViewById(R.id.button2);
+//        bt2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // TODO : click event
+//                try {
+//                    File file = getActivity().getCacheDir();  // 내부저장소 캐시 경로를 받아오기
+//                    File[] flist = file.listFiles();
+//                    for (int i = 0; i < flist.length; i++) {    // 배열의 크기만큼 반복
+//                        if (flist[i].getName().equals(imgName)) {   // 삭제하고자 하는 이름과 같은 파일명이 있으면 실행
+//                            flist[i].delete();  // 파일 삭제
+//                            Toast.makeText(getActivity().getApplicationContext(), "파일 삭제 성공", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                } catch (Exception e) {
+//                    Toast.makeText(getActivity().getApplicationContext(), "파일 삭제 실패", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
 
         Log.v(TAG, "gallery process finished...");
     }
@@ -180,9 +178,9 @@ public class Fragment2 extends Fragment{
                         instream.close();   // 스트림 닫아주기
                         saveBitmapToJpeg(imgBitmap);    // 내부 저장소에 저장
 
-                        nameList.add(resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.DISPLAY_NAME));
-                        sizeList.add(resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.SIZE));
-
+//                        adapter.addName(resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.DISPLAY_NAME));
+//                        Log.d("이름 : ", String.valueOf(resolver.query(fileUri, null, null, null, null).getColumnIndex(OpenableColumns.DISPLAY_NAME)));
+//
                     }
                     Toast.makeText(getActivity().getApplicationContext(), "파일 불러오기 성공", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
@@ -190,7 +188,6 @@ public class Fragment2 extends Fragment{
                 }
             }
         }
-        adapter.setfileandsize(nameList, sizeList);
         super.onActivityResult(requestCode, resultCode, data);
     }
 

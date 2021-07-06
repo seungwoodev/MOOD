@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment1">
+    tools:context=".Fragment1"
+    android:background="@color/blue_100">
 
     <!--Recycler view for displaying list of contacts-->
     <androidx.recyclerview.widget.RecyclerView

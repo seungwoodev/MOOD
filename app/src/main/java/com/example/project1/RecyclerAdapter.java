@@ -47,10 +47,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
         this.context=context;
         this.activity=activity;
     }
-    public void setfileandsize(ArrayList<Integer> nlist, ArrayList<Integer> slist){
-        this.nameList=nlist;
-        this.sizeList=slist;
-    }
+
 
     @NonNull
     @Override
@@ -81,13 +78,12 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
                 final View view = factory.inflate(R.layout.sample, null);
                 alertadd.setView(view);
                 iv=view.findViewById(R.id.dialog_imageview);
-                textView=view.findViewById(R.id.photo_name);
+                //textView=view.findViewById(R.id.photo_name);
 
                 //여기서 SET
                 iv.setImageURI(listData.get(position));
                 // null object reference
                 //textView.setText(nameList.get(position));
-
                 alertadd.show();
 
             }
@@ -106,6 +102,10 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
     void addItem(Uri uri) {
         // 외부에서 item을 추가시킬 함수입니다.
         listData.add(uri);
+    }
+    void addName(int name) {
+        // 외부에서 item을 추가시킬 함수입니다.
+        nameList.add(name);
     }
 
     // RecyclerView의 핵심인 ViewHolder 입니다.
