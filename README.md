@@ -25,15 +25,8 @@
 
 
 ## **App Logo**
-<div style="float: left; width: 30%;">
 <img src="https://user-images.githubusercontent.com/68985625/124529645-fe91a680-de45-11eb-9b88-8490d8b4d77e.jpg"/>
-</div>
-<div style="float: left; width: 30%;">
 
-</div>
-<div style="float: left; width: 30%;">
-
-</div>
 
 # 
 ## **Introduction**
