@@ -51,6 +51,7 @@ Download and install app/release/app-release.apk
 
 ### 
 ### - 연락처
+#### 기능 - 연락처 생성, 저장, 불러오기, 전화, 메세지
 <img width=30% alt="contact" src="https://user-images.githubusercontent.com/68985625/124556328-1fbcbc00-de73-11eb-9f1c-450ed4f8e754.png">   <img width=30% alt="contact_add" src="https://user-images.githubusercontent.com/68985625/124556335-221f1600-de73-11eb-9b72-0b53f9a988d7.png">
 
 
