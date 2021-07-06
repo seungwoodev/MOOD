@@ -44,25 +44,32 @@
 
 ### 
 ### - 시작 화면
-<img src="https://user-images.githubusercontent.com/68985625/124529421-8c20c680-de45-11eb-9a8b-af19b6ab1c78.jpg"/>
+<img src="https://user-images.githubusercontent.com/68985625/124556474-47ac1f80-de73-11eb-8aae-cb06a952454c.jpg"/>
 
 
 ### - 연락처 화면
+<img width=30% alt="contact" src="https://user-images.githubusercontent.com/68985625/124556328-1fbcbc00-de73-11eb-9f1c-450ed4f8e754.png">   <img width=30% alt="contact_add" src="https://user-images.githubusercontent.com/68985625/124556335-221f1600-de73-11eb-9b72-0b53f9a988d7.png">
 
-<img width=30% src="https://user-images.githubusercontent.com/68985625/124529405-87f4a900-de45-11eb-92f0-04a74072730d.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529409-8925d600-de45-11eb-8369-d32dc5e2b3eb.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529411-8925d600-de45-11eb-94f2-8db1d1c9e9e4.jpg"/>
 
+<img width=30% alt="contact_info" src="https://user-images.githubusercontent.com/68985625/124556345-24817000-de73-11eb-889c-85c146bfda6d.png">   <img width=30% alt="contact_call" src="https://user-images.githubusercontent.com/68985625/124556342-23504300-de73-11eb-8dee-7f489a9e5ccf.png">   <img width=30% alt="contact_text" src="https://user-images.githubusercontent.com/68985625/124556352-251a0680-de73-11eb-9dd8-517e0f3ea019.png">
 
-<img width=30% src="https://user-images.githubusercontent.com/68985625/124529413-89be6c80-de45-11eb-86b8-a9cf2b2148e0.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529415-89be6c80-de45-11eb-8099-8c0de42a0e50.jpg"/>
 
 
 
 ### - 갤러리 화면
-<img width=30% src="https://user-images.githubusercontent.com/68985625/124529417-8a570300-de45-11eb-9318-848f5b12dce4.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529419-8a570300-de45-11eb-8c24-563fad017674.jpg"/>   <img width=30% src="https://user-images.githubusercontent.com/68985625/124529420-8aef9980-de45-11eb-8b72-b51fbfa017cd.jpg"/>
+
+
+<img width=30% alt="gallery" src="https://user-images.githubusercontent.com/68985625/124556353-25b29d00-de73-11eb-8496-351ff22615ee.png">   <img width=30% alt="gallery_click" src="https://user-images.githubusercontent.com/68985625/124556354-264b3380-de73-11eb-9ee7-46dd527ec48f.png">   <img width=30% alt="gallery_in" src="https://user-images.githubusercontent.com/68985625/124556379-2d724180-de73-11eb-9eec-49ff9b08bb6e.png">
+
+
+<img width=30% alt="gallery_in2" src="https://user-images.githubusercontent.com/68985625/124556410-3400b900-de73-11eb-861b-b011fd787f8e.png">   <img width=30% alt="gallery_select" src="https://user-images.githubusercontent.com/68985625/124556412-3531e600-de73-11eb-9d0e-ea2f9df97d20.png">   <img width=30% alt="gallery_show" src="https://user-images.githubusercontent.com/68985625/124556433-3a8f3080-de73-11eb-90b7-1fafb47dded9.png">
+
 
 
 
 ### - 음악 화면
-<img width=30% />
+<img width=30% alt="music" src="https://user-images.githubusercontent.com/68985625/124556454-411da800-de73-11eb-8cb5-95693b4c53cf.png">  <img width=30% alt="music_show1" src="https://user-images.githubusercontent.com/68985625/124556457-41b63e80-de73-11eb-929d-ad083e727406.png">  <img width=30% alt="music_show2" src="https://user-images.githubusercontent.com/68985625/124556469-45e25c00-de73-11eb-9319-f6ebf66406a5.png">
+
 
  
  
