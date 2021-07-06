@@ -1,21 +1,20 @@
 package com.example.project1;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
+
 import java.util.ArrayList;
 
 
@@ -51,12 +50,12 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
 
     // onCreateViewHolder() - 아이템 뷰를 위한 뷰홀더 객체 생성하여 리턴.
     @Override
-    public ContactRVAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
         View view = inflater.inflate(R.layout.f1_layout_complex, parent, false) ;
-        ContactRVAdapter.ViewHolder vh = new ContactRVAdapter.ViewHolder(view) ;
+        ViewHolder vh = new ViewHolder(view) ;
 
         return vh ;
     }
@@ -69,7 +68,7 @@ public class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.View
 
     // onBindViewHolder() - position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
     @Override
-    public void onBindViewHolder(ContactRVAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         PhoneBook modal = mList.get(position);
 
         holder.name.setSelected(true);

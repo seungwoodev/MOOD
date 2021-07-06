@@ -3,10 +3,10 @@
 <!--    <color name="purple_200">#FFBB86FC</color>-->
 <!--    <color name="purple_500">#FF6200EE</color>-->
 <!--    <color name="purple_700">#FF3700B3</color>-->
-    <color name="blue_100">#fafaff</color>
-    <color name="blue_200">#d9ddff</color>
-    <color name="blue_500">#929df0</color>
-    <color name="blue_700">#273bd6</color>
+    <color name="purple_100">#fafaff</color>
+    <color name="purple_200">#d9ddff</color>
+    <color name="purple_500">#929df0</color>
+    <color name="purple_700">#273bd6</color>
     <color name="teal_200">#c9a6ff</color>
     <color name="teal_700">#5c1cbd</color>
     <color name="black">#FF000000</color>

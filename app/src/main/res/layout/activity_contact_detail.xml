@@ -11,7 +11,7 @@
         android:id="@+id/idIVContact"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@color/blue_200"
+        android:background="@color/purple_200"
         android:padding="50dp"
         android:src="@drawable/ic_account"
         app:tint="@color/white" />
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idIVContact"
-        android:background="@color/blue_200"
+        android:background="@color/purple_200"
         android:padding="8dp"
         android:text="Name"
         android:textColor="@color/white"
@@ -50,7 +50,7 @@
                 android:layout_margin="8dp"
                 android:padding="4dp"
                 android:src="@drawable/ic_call"
-                app:tint="@color/blue_700" />
+                app:tint="@color/purple_700" />
             <!--text view for displaying user contact-->
             <TextView
                 android:id="@+id/idTVPhone"
@@ -73,7 +73,7 @@
                 android:layout_margin="8dp"
                 android:padding="4dp"
                 android:src="@drawable/ic_message"
-                app:tint="@color/blue_700" />
+                app:tint="@color/purple_700" />
 
         </RelativeLayout>
 
