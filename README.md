@@ -1,5 +1,5 @@
 # MOOD
-**KAIST MADCAMP/CS496 Project1**
+**KAIST MADCAMP CS496 Project1**
 
 **+) apk 파일 위치 :**
 
