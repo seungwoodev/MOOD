@@ -1,5 +1,6 @@
 # MOOD
-**KAIST MADCAMP CS496 Project1**
+**KAIST MADCAMP CS496 Week 1**
+**A compact app that works with contacts and galleries, location, weather-based music recommendations, and YouTube links**
 
 **+) apk 파일 위치 : app/releases/app-release.apk**
 
